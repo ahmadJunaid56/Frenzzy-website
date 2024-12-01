@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frenzzy Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- aos animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- font awesome   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header class="wrapper mx-2">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/images/wind.png" class="px-2" alt="">Frenzzy
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="/images/menu.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="posts.html">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-btn" href="#" id="cart-button" data-bs-toggle="modal" data-bs-target="#cartModal">
+                Cart <span class="cart-count" id="cart-count">(0)</span>
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex search-form">
+            <input class="form-control search-input me-2" type="search" placeholder="type something"
+              aria-label="Search">
+            <button class="btn search-btn" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&#x2715;</button>
+        </div>
+        <div class="modal-body" id="cart-modal-body">
+          <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="modal-footer">
+          <div class="w-100 text-end">
+            <p><strong>Subtotal:</strong> <span id="cart-subtotal">$0.00 USD</span></p>
+            <button type="button" class="btn btn-dark w-100">Continue to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="about-banner">
+    <div class="about mb-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="/images/icon.png" alt="">
+              </div>
+              <div class="col-md-9">
+                <p class="para-about">We're powered by our unwavering devotion to rafting engaging content, exploring
+                  fresh perspectives, and embracing the forefront of literary exploration.</p>
+              </div>
+            </div>
+            <hr>
+            <p class="para-about1">We thrive on crafting compelling content, exploring new perspectives, and pushing
+              literary boundaries with unwavering dedication.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="about-image1">
+              <img
+                src="https://assets-global.website-files.com/6577019a915bb98abc733614/65770613e6074c335d770a88_about.jpg"
+                class="rounded-4 about-image img-responsive" alt="">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row px-2">
+        <div class="col-md-4 col-sm-12">
+          <div class="contact-text ">
+            <p><i class="fa-regular fa-square fa-lg" style="color: #B197FC;"></i>The Voices Behind Our Pages</p>
+          </div>
+          <hr>
+          <div class="contact-head">
+            <h2 class="contact-heading">Author</h2>
+          </div>
+
+        </div>
+        <div class="col-md-8 mt-4 px-4">
+          <div class="row">
+            <div class="col-md-6 about-author">
+              <div class="row">
+                <div class="col-md-7">
+                  <img src="images/about/12131.jpg" height="120px" width="120px" class="about-image123" alt="">
+                </div>
+                <div class="col-md-5">
+                  <button class="profile">Profile</button>
+                </div>
+              </div>
+              <h5 class="author-name">Demetris Osinski</h5>
+              <p class="author-detail">A dedicated environmentalist, Alex sheds light on pressing ecological issues and
+                sustainability practices. His articles inspire action and offer practical insights for a greener future.
+              </p>
+            </div>
+            <div class="col-md-6 about-author">
+              <div class="row">
+                <div class="col-md-7">
+                  <img src="images/about/143274.jpg" height="120px" width="120px" class="about-image123" alt="">
+                </div>
+                <div class="col-md-5">
+                  <button class="profile">Profile</button>
+                </div>
+              </div>
+              <h5 class="author-name">Alex Carter</h5>
+              <p class="author-detail">A dedicated environmentalist, Alex sheds light on pressing ecological issues and
+                sustainability practices. His articles inspire action and offer practical insights for a greener future.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-6 about-author">
+              <div class="row">
+                <div class="col-md-7">
+                  <img src="images/about/145493.jpg" height="120px" width="120px" class="about-image123" alt="">
+                </div>
+                <div class="col-md-5">
+                  <button class="profile">Profile</button>
+                </div>
+              </div>
+              <h5 class="author-name">Liam Nison</h5>
+              <p class="author-detail">A dedicated environmentalist, Alex sheds light on pressing ecological issues and
+                sustainability practices. His articles inspire action and offer practical insights for a greener future.
+              </p>
+            </div>
+            <div class="col-md-6 about-author">
+              <div class="row">
+                <div class="col-md-7">
+                  <img src="images/about/19637.jpg" height="120px" width="120px" class="about-image123" alt="">
+                </div>
+                <div class="col-md-5">
+                  <button class="profile">Profile</button>
+                </div>
+              </div>
+              <h5 class="author-name">Mike Ivans</h5>
+              <p class="author-detail">A dedicated environmentalist, Alex sheds light on pressing ecological issues and
+                sustainability practices. His articles inspire action and offer practical insights for a greener future.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container-fluid">
+      <div class="row row-cols-1 px-2">
+
+        <div class="col-md-4 col-sm-12">
+          <h4>Contact</h4>
+          <p><i class="fa-regular fa-envelope fa-lg "></i>hello@gmail.com</p>
+          <p><i class="fa-solid fa-phone fa-lg "></i>+92 123-456-789</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>Socials</h4>
+          <div class="social">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-vimeo-v"></i></a>
+
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>Newsletters</h4>
+          <p class="newsletter">Stay ahead of the curve with our exclusive daily newsletter directly in your
+            inbox!</p>
+          <input type="email" name="Email" id="email" placeholder="your-email"><button>Subscribe</button>
+        </div>
+      </div>
+      <div class="copyright">
+        <a>© 2023 Frenzzy - Webflow Template. Made by Max Themes</a>
+      </div>
+      <p class="pb-5 m-0"></p>
+    </div>
+  </section>
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- for animation cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    })
+  </script>
+
+</body>
+
+</html>
